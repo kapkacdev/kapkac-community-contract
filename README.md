@@ -561,10 +561,8 @@ KAPKAC represents a revolutionary approach to ride-sharing in Istanbul, combinin
 
 ## Contact Information
 
-* Website: [kapkac.com]
-* Telegram: [@KapkacCommunity]
-* Email: [contact@kapkac.com]
-* Twitter: [@KapkacOfficial]
+* Telegram Bot: [@kapkac_istanbul_bot](https://t.me/kapkac_istanbul_bot)
+* Official Channel : [@kapkac_istanbul](https://t.me/kapkac_istanbul)
 
 ---
 
