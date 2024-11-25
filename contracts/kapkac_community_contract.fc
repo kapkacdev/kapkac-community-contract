@@ -312,8 +312,6 @@ int calculate_ride_price(int distance, int duration, int traffic_multiplier, int
     return (price_with_multiplier * (10000 - fee_reduction)) / 10000;
 }
 
-;; First declare helper functions that distribute_sprint_rewards will use
-
 (cell, int) calculate_qualified_drivers(int start_time, int end_time, int min_rides) impure {
     cell qualified_drivers = new_dict();
     int driver_count = 0;
@@ -360,8 +358,6 @@ int calculate_ride_price(int distance, int duration, int traffic_multiplier, int
     return (qualified_drivers, driver_count);
 }
 
-;; Then define the main distribute_sprint_rewards function 
-;; Make sure this appears only once in the contract
 () distribute_sprint_rewards(int sprint_id) impure {
     (cell sprint_data, int success) = sprints.udict_get_ref?(256, sprint_id);
     throw_unless(901, success);
@@ -424,9 +420,6 @@ int calculate_ride_price(int distance, int duration, int traffic_multiplier, int
 }
 
 ;; ============= Sprint System =============
-
-;; Modified get_trust_score to return fixed width integers
-;; ============= Updated Message Handlers =============
 () send_referral_rewards(slice ref1, slice ref2) impure {
     ;; Build message for first referrer
     var msg1 = begin_cell()
@@ -567,8 +560,7 @@ int calculate_ride_price(int distance, int duration, int traffic_multiplier, int
 
 
 
-;; ============= Updated Get Methods =============
-
+;; ============= Get Methods =============
 (int, slice, int) get_member_data(slice address) {
     (cell member_data, int success) = members.udict_get_ref?(256, slice_hash(address));
     if (~ success) {
