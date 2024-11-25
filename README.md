@@ -207,9 +207,9 @@ Final Price = (BASE_FARE + (KM_RATE × distance) + (MINUTE_RATE × time)) ×
 ```
 
 Default Values:
-* `BASE_FARE = 50 TRY`
-* `KM_RATE = 30 TRY`
-* `MINUTE_RATE = 10 TRY`
+* `BASE_FARE = 5000 KAC`
+* `KM_RATE = 3000 KAC`
+* `MINUTE_RATE = 100 KAC`
 
 #### 4.3.2 Dynamic Multipliers
 
